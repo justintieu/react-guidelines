@@ -7,6 +7,7 @@
   1. [Basic Rules](#basic-rules)
   1. [Class vs `React.createClass` vs stateless](#class-vs-reactcreateclass-vs-stateless)
   1. [Naming](#naming)
+  
   1. [Declaration](#declaration)
   1. [Alignment](#alignment)
   1. [Quotes](#quotes)
@@ -160,7 +161,17 @@
 
     > Why? It makes it confusing when a person comes to find actions/Foo.js and reducers/Foo.js. You should use camel case to differenate a component versus a redux file. You should also specify what type of redux file it is to make it easier to find.
 
+    ```jsx
     // bad
+    const a = 1,
+        foo = 2
+        bar = "stuff";
+
+    // good
+    const a = 1;
+    const foo = 2;
+    const bar = "stuff";
+    ```
 
 ## Alignment
 
