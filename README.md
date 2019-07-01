@@ -11,7 +11,6 @@
   1. [Alignment](#alignment)
   1. [Quotes](#quotes)
   1. [Spacing](#spacing)
-  1. [Imports](#imports)
   1. [Props](#props)
   1. [Refs](#refs)
   1. [Parentheses](#parentheses)
