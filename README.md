@@ -226,7 +226,7 @@
     <Foo bar="bar" />
     ```
 
-    ```js
+    ```jsx
     // bad
     const foo = 'bar';
 
@@ -416,6 +416,23 @@ We don’t recommend using indexes for keys if the order of items may change.
     return <WrappedComponent {...relevantProps} />
   }
   ```
+
+  - Avoid using arrow functions when passing a function as a property
+
+  ```jsx
+  // bad
+  <Foo
+    bar={ev => { this.doStuff(ev) }}
+  />
+
+  // good
+  doStuff = (ev) => {
+    // does stuff
+  };
+  <Foo
+    bar={this.doStuff}
+  />
+  ```
 ## Refs
 
   - Always use ref callbacks
@@ -550,7 +567,7 @@ We don’t recommend using indexes for keys if the order of items may change.
 
     If you need to use `bind` to render a list and have a separate callback for item, you should pull 
     the list items into it's own component.
-    ```js
+    ```jsx
     // bad
     const List extends React.Component {
       render() {
@@ -723,7 +740,7 @@ We don’t recommend using indexes for keys if the order of items may change.
   />
   ```
 
-  ```js
+  ```jsx
   // bad
   const {
     garply,
